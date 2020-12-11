@@ -1,5 +1,6 @@
 import React from 'react';
-import { Button, Card, Container, Row } from 'react-bootstrap';
+import { Button, Card, Container} from 'react-bootstrap';
+import festivals from '../Constants/festivals';
 import CustomCorousel from './CustomCarousel';
 import Hero from './Hero';
 
@@ -11,22 +12,45 @@ class Homepage extends React.Component {
                 <CustomCorousel/>
 
                 <div className="odd-section padding">
-                    <Container>
-                        <h1>Things to Do</h1>
-                        <Row>
-                            <Card className="col-4">
-                                <Card.Img variant="top" src={require('../img/jumboImg.jpg')} />
-                                <Card.Body>
-                                    <Card.Title>Subtitle</Card.Title>
-                                    <Card.Text>
-                                        Some info
-                                    </Card.Text>
-                                    <Button variant="primary" href="tourist-spot/1">Check Out</Button>
-                                </Card.Body>
-                            </Card>
-                        </Row>
-                        <a href="/tourist-spots"><p>More</p></a>
-                    </Container>
+                    <h1>Things to Do</h1>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4">
+                                <div className="card card-blog">
+                                    <div className="card-image">
+                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
+                                        <div className="ripple-cont"></div>
+                                    </div>
+                                    <div className="card-footer">
+                                        <h2>Sample Name 1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card card-blog">
+                                    <div className="card-image">
+                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
+                                        <div className="ripple-cont"></div>
+                                    </div>
+                                    <div className="card-footer">
+                                        <h2>Sample Name 1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-md-4">
+                                <div className="card card-blog">
+                                    <div className="card-image">
+                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
+                                        <div className="ripple-cont"></div>
+                                    </div>
+                                    <div className="card-footer">
+                                        <h2>Sample Name 1</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/tourist-spots"><p>More</p></a>
                 </div>
 
 
@@ -34,46 +58,32 @@ class Homepage extends React.Component {
                     <div className="section-title">
                         <h1>Festivals</h1>
                     </div>
-                <div className="Timeline">
-                    <Container>
-                        <div className="timeline-item-left">
-                            <div className="timeline-img">
-                                
-                            </div>
-                            <div className="timeline-content">
-                                <div className="date">1 Jan 2020</div>
-                                <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/>
-                                <h3>Title</h3>
-                                <h4>Subtitle</h4>
-                            </div>
-                        </div>
-                        <div className="timeline-item-right">
-                            <div className="timeline-img">
-                                
-                            </div>
-                            <div className="timeline-content">
-                                <div className="date">1 Jan 2020</div>
-                                <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/>
-                                <h3>Title</h3>
-                                <h4>Subtitle</h4>
-                            </div>
-                        </div>
-                        <div className="timeline-item-left">
-                            <div className="timeline-img">
-                                
-                            </div>
-                            <div className="timeline-content">
-                                <div className="date">1 Jan 2020</div>
-                                <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/>
-                                <h3>Title</h3>
-                                <h4>Subtitle</h4>
-                            </div>
-                        </div>
-                    </Container>
-            </div>
+                    <div className="Timeline">
+                        <Container>
+                            {festivals.map((item, index) => {
+                                const dir = index % 2 === 0 ? "timeline-item-left" : "timeline-item-right";
+                                return(
+                                    <div className={dir}>
+                                        <div className="timeline-img">
+                                            
+                                        </div>
+                                        <div className="timeline-content">
+                                        <div className="date">{item.month}</div>
+                                            {/* <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/> */}
+                                            <h3>{item.name}</h3>
+                                        </div>
+                                    </div>
+                                )
+                            })}
+                        </Container>
+                    </div>
                 </div>
 
                 <div className="odd-section padding">
+                    <iframe className="main-map" title="map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62369.06420978854!2d76.6204090727509!3d12.311307694910143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf70381d572ef9%3A0x2b89ece8c0f8396d!2sMysuru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1607701603641!5m2!1sen!2sin" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+
+                <div className="even-section padding">
                     <Container>
                         <Card>
                             <Card.Header><h1>Blog Post</h1></Card.Header>

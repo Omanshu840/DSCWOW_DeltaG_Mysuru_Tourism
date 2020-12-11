@@ -1,5 +1,6 @@
 import React, { useState} from 'react'
-import { Carousel, Container } from 'react-bootstrap';
+import { Button, Carousel, Container } from 'react-bootstrap';
+import tourist_spots from '../Constants/tourist_spots';
 
 function CustomCorousel() {
   const [index, setIndex] = useState(0);
@@ -16,39 +17,22 @@ function CustomCorousel() {
           <div className="underline"></div>
         </div>
         <Carousel activeIndex={index} onSelect={handleSelect}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={require('../img/jumboImg.jpg')}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h1>Mysore Palace</h1>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={require('../img/jumboImg.jpg')}
-              alt="Second slide"
-            />
-
-            <Carousel.Caption>
-              <h1>Somnathpur Temple</h1>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={require('../img/jumboImg.jpg')}
-              alt="Third slide"
-            />
-
-            <Carousel.Caption>
-              <h1>Sri Chamundeshwari Temple</h1>
-            </Carousel.Caption>
-          </Carousel.Item>
+            {tourist_spots.map((item, index) => {
+                return(
+                    <Carousel.Item>
+                        <img
+                        className="d-block w-100"
+                        src={require('../img/jumboImg.jpg')}
+                        alt="First slide"
+                        />
+                        <Carousel.Caption>
+                        <h1>{item.name}</h1>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                )
+            })}
         </Carousel>
+        <Button href="/tourist-spots" variant="primary">See More Tourist Spots</Button>
       </Container>
     </div>
   );

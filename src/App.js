@@ -12,7 +12,7 @@ import TouristSpots from './Components/TouristSpots';
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="light-mode">
         <CustomNavbar/>
         <BrowserRouter>
           <Switch>
