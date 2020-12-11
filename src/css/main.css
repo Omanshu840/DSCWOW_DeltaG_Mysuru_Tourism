@@ -4,3 +4,16 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
 }
+
+.padding {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.even-section {
+    background-color: #FEFFFF;
+}
+
+.odd-section {
+    background-color: #def2f1;
+}
