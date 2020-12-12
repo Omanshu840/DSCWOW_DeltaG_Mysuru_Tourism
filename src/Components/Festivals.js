@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Fade from 'react-reveal/Fade';
+import festivals from '../Constants/festivals';
 
 export default class Festivals extends Component {
     render() {
@@ -8,7 +9,8 @@ export default class Festivals extends Component {
             <div className="intro odd-section">
                 <Container className="padding">
                     <Row>
-                        <   div className="col-12 col-md-6 order-md-last  Subheading">
+                        <div className="col-12 col-md-6 order-md-last  Subheading">
+                            <img className="festive-img" src={require("../img/jumboImg.jpg")} alt="..."></img>
                             <div className="caption">
                                 <h1 className="display-2">How to Apply?</h1>
                             </div>

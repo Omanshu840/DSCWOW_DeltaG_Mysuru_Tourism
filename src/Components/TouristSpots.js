@@ -12,15 +12,16 @@ export default class TouristSpots extends Component {
                     {tourist_spots.map((item, index) => {
 
                         const streetViewUrl = `/tourist-spot/${item.id}`;
+                        const cssClass = (index%2) ? "col-md-6" : "col-md-6 order-md-last";
 
                         return (
                             <div className="card">
                                 <div className="row">
                                 
-                                    <div className="col-md-6">
+                                    <div className={cssClass}>
                                         <img src={item.img_Link} alt="..."></img>
                                     </div>
-                                    <div className="col-md-6">
+                                    <div className="col-md-6 p-5">
                                         <h2>{item.name}</h2>
                                         <h5>Distance from City Center {item.distance_from_City_centre}</h5>
                                         <p>{item.description}</p>
