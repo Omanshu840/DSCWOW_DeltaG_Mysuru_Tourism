@@ -1,20 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
 
 :root {
     --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .light-mode {
-    --pricolor-1: #fdfcfb;
-    --pricolor-2: #f6f2ea;
-    --seccolor-1: #783884;
-    --seccolor-2: #39134e;
+    --pricolor-1: #f8efd4;
+    --pricolor-2: #edc988;
+    --seccolor-1: #d7385e;
+    --seccolor-2: #132743;
   }
   
   .dark-mode {
@@ -22,6 +18,35 @@ body {
     --pricolor-2: #393e46;
     --seccolor-1: #ebd4d4;
     --seccolor-2: #fff0f0;
+}
+
+.main-navbar {
+    background-color: var(--seccolor-2);
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: var(--seccolor-2);
+}
+  .section-title {
+    color: var(--seccolor-2);
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .underline {
+    width: 5rem;
+    height: 0.25rem;
+    margin-bottom: 1.25rem;
+    background: var(--seccolor-1);
+    margin-left: auto;
+    margin-right: auto;
   }
 
 .padding {
@@ -30,11 +55,28 @@ body {
 }
 
 .even-section {
-    background-color: #FEFFFF;
+    background-color: var(--pricolor-1);
 }
 
 .odd-section {
-    background-color: #def2f1;
+    background-color: var(--pricolor-2);
+}
+
+.btn {
+    margin: 20px;
+    color: var(--pricolor-1) !important;
+    background: var(--seccolor-1);
+    padding: 20px;
+    box-shadow: --var(--dark-shadow);
+    border: 4px solid var(--seccolor-2) !important;
+    transition: all 0.4s ease 0s;
+}
+
+.btn:hover {
+    color: #ffffff !important;
+    background: var(--seccolor-2);
+    border-color: var(--seccolor-1) !important;
+    transition: all 0.4s ease 0s;
 }
 
 .jumbotron {
@@ -66,6 +108,9 @@ body {
     font-weight: 600;
 }
 
+.carousel {
+    box-shadow: var(--dark-shadow);
+}
 
 .carousel-item img {
     height: 35vw;
@@ -154,8 +199,8 @@ body {
     width: 45%;
     padding: 10px 30px;
     border-radius: 4px;
-    color: var(--seccolor-2);
-    background: var(--pricolor-2);
+    color: var(--pricolor-1);
+    background: var(--seccolor-2);
     text-align: center;
     box-shadow: var(--dark-shadow);
   }
@@ -185,7 +230,7 @@ body {
   }
   
   .date {
-    background: var(--pricolor-1);
+    background: var(--pricolor-2);
     border:2px solid var(--seccolor-2);
     display: inline-block;
     color: var(--seccolor-2);
@@ -238,7 +283,16 @@ body {
   }
 
 
+.btn-chatbot {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
 
+.chatbot {
+    height: 80vh;
+    width: 25vw;
+}
 
 .section-cards {
     z-index: 3;
@@ -251,6 +305,37 @@ body {
 }
 
 
+.streetview {
+    box-shadow: var(--dark-shadow);
+    width: 80vw;
+    height: 40vw;
+} 
+
+.blog-jumbotron {
+    height: 35vw;
+    width: 100%;
+    background-image: url("../img/blog_jumbo.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blog-jumbotron .jumbo-text h1 {
+    color: #FEFFFF;
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.blogpage .card{
+    background-color: var(--pricolor-1);
+}
+
+.blogform form {
+    text-align: left;
+    padding: 50px;
+    background-color: var(--pricolor-1);
+}
+
 /*---------------------------------------------------------------------- /
 CARDS
 ----------------------------------------------------------------------- */
@@ -261,9 +346,14 @@ CARDS
     width: 100%;
     margin-bottom: 30px;
     border-radius: 6px;
-    color: rgba(0, 0, 0, 0.87);
-    background: #fff;
+    color: var(--seccolor-2);
+    background: var(--pricolor-1);
+    transition: 0.3s;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card:hover {
+    transform: scale(1.02);
 }
 
 .card .card-image {

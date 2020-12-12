@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import BlogHomePage from './Components/BlogHomePage';
 import BlogPage from './Components/BlogPage';
+import Chatbot from './Components/Chatbot';
 import Festivals from './Components/Festivals';
 import Homepage from './Components/Homepage';
 import CustomNavbar from './Components/Navbar';
@@ -25,6 +26,7 @@ export default class App extends Component {
             <Route exact path="/blog/:blog_id" component={BlogPage} />
           </Switch>
         </BrowserRouter>
+        <Chatbot/>
       </div>
     )
   }

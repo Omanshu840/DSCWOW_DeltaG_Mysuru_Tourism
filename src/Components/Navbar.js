@@ -5,7 +5,7 @@ export default class CustomNavbar extends Component {
     render() {
         return (
             
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar className="main-navbar" collapseOnSelect expand="lg" variant="dark">
             <Container>
                 <Navbar.Brand href="#home">Mysuru Tourism</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />

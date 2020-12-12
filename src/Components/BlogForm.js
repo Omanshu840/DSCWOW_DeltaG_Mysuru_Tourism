@@ -32,13 +32,16 @@ const BlogForm = () => {
     }
 
     return (
-        <div className="odd-section padding">
+        <div className="blogform odd-section padding">
             <Container>
-                <h1>Write a blog</h1>
+                <div className="section-title">
+                    <h1>Write a Blog</h1>
+                    <div className="underline"></div>
+                </div>  
                 <Form onSubmit={handleSubmit}>
                     <Form.Group controlId="exampleForm.ControlInput1">
-                        <Form.Label>Blog Topic</Form.Label>
-                        <Form.Control type="name" placeholder="Enter Blog Topic" value={blog_name} onChange={(e) => setBlogName(e.target.value)}/>
+                        <Form.Label>Blog Heading</Form.Label>
+                        <Form.Control type="name" placeholder="Enter Blog Heading" value={blog_name} onChange={(e) => setBlogName(e.target.value)}/>
                     </Form.Group>
                     <Form.Group controlId="exampleForm.ControlInput2">
                         <Form.Label>Your Name</Form.Label>

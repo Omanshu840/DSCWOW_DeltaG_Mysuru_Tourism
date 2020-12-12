@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Card, Container} from 'react-bootstrap';
 import festivals from '../Constants/festivals';
+import thingstodo from '../Constants/thingstodo';
 import CustomCorousel from './CustomCarousel';
 import Hero from './Hero';
 
@@ -12,42 +13,25 @@ class Homepage extends React.Component {
                 <CustomCorousel/>
 
                 <div className="odd-section padding">
-                    <h1>Things to Do</h1>
+                    <div className="section-title">
+                        <h1>Things to Do</h1>
+                        <div className="underline"></div>
+                    </div>
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-4">
-                                <div className="card card-blog">
-                                    <div className="card-image">
-                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
-                                        <div className="ripple-cont"></div>
+                            {thingstodo.map((item, index) => {
+                                return (
+                                    <div className="col-md-4">
+                                        <div className="card card-blog">
+                                            <div className="card-image">
+                                                <a href="/"> <img className="img img-raised" src={item.imgLink}  alt="..." /> </a>
+                                                <div className="ripple-cont"></div>
+                                            </div>
+                                            <h3 className="pt-5 pb-2">{item.name}</h3>
+                                        </div>
                                     </div>
-                                    <div className="card-footer">
-                                        <h2>Sample Name 1</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card card-blog">
-                                    <div className="card-image">
-                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
-                                        <div className="ripple-cont"></div>
-                                    </div>
-                                    <div className="card-footer">
-                                        <h2>Sample Name 1</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="card card-blog">
-                                    <div className="card-image">
-                                        <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
-                                        <div className="ripple-cont"></div>
-                                    </div>
-                                    <div className="card-footer">
-                                        <h2>Sample Name 1</h2>
-                                    </div>
-                                </div>
-                            </div>
+                                )
+                            })}
                         </div>
                     </div>
                     <a href="/tourist-spots"><p>More</p></a>

@@ -8,25 +8,30 @@ export default class TouristSpots extends Component {
             <div className="tourist-spots even-section padding">
                 <h2>Tourist Spots</h2>
                 <div className="container">
-                        <div className="row">
-                            {tourist_spots.map((item, index) => {
-                                return (
-                                    <div className="col-md-4">
-                                        <div className="card card-blog">
-                                            <div className="card-image">
-                                                <a href="/"> <img className="img img-raised" src="http://adamthemes.com/demo/code/cards/images/blog01.jpeg"  alt="..." /> </a>
-                                                <div className="ripple-cont"></div>
-                                            </div>
-                                            <div className="card-footer">
-                                                <h2>{item.name}</h2>
-                                            </div>
-                                        </div>
+                        
+                    {tourist_spots.map((item, index) => {
+
+                        const streetViewUrl = `/tourist-spot/${item.id}`;
+
+                        return (
+                            <div className="card">
+                                <div className="row">
+                                
+                                    <div className="col-md-6">
+                                        <img src={item.img_Link} alt="..."></img>
                                     </div>
-                                )
-                            })}
-                        </div>
-                    </div>
-        
+                                    <div className="col-md-6">
+                                        <h2>{item.name}</h2>
+                                        <h5>Distance from City Center {item.distance_from_City_centre}</h5>
+                                        <p>{item.description}</p>
+                                        <Button href={streetViewUrl}>View Street View</Button>
+                                    </div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                        
+                </div>
             </div>
         )
     }

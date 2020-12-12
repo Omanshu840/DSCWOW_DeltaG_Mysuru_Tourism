@@ -22,7 +22,7 @@ function CustomCorousel() {
                     <Carousel.Item>
                         <img
                         className="d-block w-100"
-                        src={require('../img/jumboImg.jpg')}
+                        src={item.img_Link}
                         alt="First slide"
                         />
                         <Carousel.Caption>
