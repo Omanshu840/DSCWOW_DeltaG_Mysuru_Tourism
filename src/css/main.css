@@ -7,10 +7,11 @@
 }
 
 .light-mode {
-    --pricolor-1: #f8efd4;
-    --pricolor-2: #edc988;
-    --seccolor-1: #d7385e;
-    --seccolor-2: #132743;
+    --pricolor-1: #e5e5e5;
+    --pricolor-2: white;  
+    --seccolor-1: #ea5455;
+    --seccolor-2: #2d4059;
+    --color-3: #e5e5e5;
   }
   
   .dark-mode {
@@ -22,11 +23,15 @@
 
 .main-navbar {
     background-color: var(--seccolor-2);
+    font-size: 18px;
+    font-weight: 600;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--seccolor-2);
 }
   .section-title {
@@ -66,10 +71,14 @@ body {
     margin: 20px;
     color: var(--pricolor-1) !important;
     background: var(--seccolor-1);
-    padding: 20px;
-    box-shadow: --var(--dark-shadow);
-    border: 4px solid var(--seccolor-2) !important;
+    padding: 10px;
+    /* border: 4px solid var(--seccolor-2) !important; */
     transition: all 0.4s ease 0s;
+}
+
+.popular-section-info {
+    background-color: #00adb5;
+    color: var(--seccolor-2);
 }
 
 .btn:hover {
@@ -179,7 +188,7 @@ body {
     top: 30px;
     left: -15px;
     border-width: 10px 15px 10px 0;
-    border-color: transparent var(--pricolor-2) transparent transparent;
+    border-color: transparent var(--seccolor-2) transparent transparent;
   }
   
   .timeline-item-right::after {
@@ -202,7 +211,7 @@ body {
     color: var(--pricolor-1);
     background: var(--seccolor-2);
     text-align: center;
-    box-shadow: var(--dark-shadow);
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
   }
   
   
@@ -268,7 +277,7 @@ body {
       top: 30px;
       left: -15px;
       border-width: 10px 15px 10px 0;
-      border-color: transparent var(--pricolor-2) transparent transparent;
+      border-color: transparent var(--seccolor-2) transparent transparent;
     }
   
     .timeline-item-left .timeline-content .date {
@@ -278,13 +287,16 @@ body {
   }
 
   .main-map {
+      border-style: solid;
+      border-width: 6px;
+      border-color: var(--seccolor-2); 
       height: 40vw;
       width: 80vw;
   }
 
 
 .btn-chatbot {
-    border-radius: 50%;
+    border-radius: 10%;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -352,8 +364,45 @@ body {
     font-weight: 600;
 }
 
+.main-footer {
+    background-color: var(--seccolor-2);
+    color: var(--pricolor-1);
+}
 
+.main-footer a{
+    text-decoration: none;
+    color: var(--pricolor-1);
+}
 
+.blog-cardheader {
+    background-color: var(--seccolor-2);
+    color: var(--pricolor-1);
+}
+
+.blog-cardbody {
+    background-color: white;
+}
+
+.things-to-do-section img{
+    width: 100%;
+    height: auto;
+}
+
+.img-tourist-spots img{
+    /* object-fit: cover; */
+    width: 100%;
+    height: 100%;
+}
+
+.tourist-spot-heading {
+    background-color: var(--seccolor-2);
+    color: var(--pricolor-1);
+}
+
+.tds-heading {
+    background-color: var(--seccolor-2);
+    color: var(--pricolor-1);
+}
 
 /*---------------------------------------------------------------------- /
 CARDS
@@ -366,13 +415,14 @@ CARDS
     margin-bottom: 30px;
     border-radius: 6px;
     color: var(--seccolor-2);
-    background: var(--pricolor-1);
+    background: var(--color-3);
     transition: 0.3s;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.14), 0 10px 10px -2px rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card:hover {
-    transform: scale(1.02);
+    transform: translateY(-10px);
+    /* transform: scale(1.02); */
 }
 
 .card .card-image {

@@ -28,7 +28,7 @@ const thingstodo = [
         name: "Brunch at Green Hotel",
         imgLink: require('../img/things_to_do/brunch_at_green_hotel.jpg'),
         description: "People come here for lunch and to just hang and meet friends in the gardens. They have farmers markets and vendor booths set up. A great place to spend the afternoon and the food here is great too. ",
-    }
+    },
     {
         id: 5,
         name: "Explore Yoga",

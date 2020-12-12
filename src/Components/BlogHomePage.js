@@ -1,5 +1,6 @@
 import React, { Component, useState } from 'react'
 import { Container, Jumbotron, Card, Button, Form} from 'react-bootstrap'
+import tourist_spots from '../Constants/tourist_spots';
 import { db } from '../firebase'
 import BlogForm from './BlogForm'
 
@@ -32,29 +33,27 @@ class BlogHomePage extends Component {
                     </div>
                 </Jumbotron>
                 <Container>
-                        {this.state.blogs.map((item, index) => {
-                            const blogLink = "/blog/" + index;
+                
+                    <div className="row">
+                        {tourist_spots.map((item, index) => {
+
+                            const link = "place-blog/" + index;
+
                             return (
-                                <div className="padding">
-                                    <Card>
-                                        <Card.Header><h1>{item.blog_name}</h1></Card.Header>
-                                        <Card.Body>
-                                            <blockquote className="blockquote mb-0">
-                                            <p>
-                                                {' '}
-                                                {item.content}
-                                            {' '}
-                                            </p>
-                                            <footer className="blockquote-footer">
-                                                <cite title="Source Title">{item.author_name}, {item.email}</cite>
-                                            </footer>
-                                            </blockquote>
-                                            <Button href={blogLink} variant="primary">Check Full Article</Button>
-                                        </Card.Body>
-                                    </Card>
+                                <div className="col-md-4">
+                                    <a href={link}>
+                                    <div className="card card-blog">
+                                        <div className="card-image">
+                                            <a href="/"> <img className="img img-raised" src={item.img_Link}  alt="..." /> </a>
+                                            <div className="ripple-cont"></div>
+                                        </div>
+                                        <h5 className="pt-5 pb-2">{item.name} Blogs</h5>
+                                    </div>
+                                    </a>
                                 </div>
                             )
                         })}
+                    </div>
                 </Container>
                 <BlogForm/>
             </div>
