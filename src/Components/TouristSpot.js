@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import tourist_spots from '../Constants/tourist_spots';
 
@@ -15,6 +16,11 @@ function TouristSpot(props) {
             <div className="padding">
                 <iframe className="streetview"title="image 1" src={tourist_spots[tourist_spot_id]['street_view_url']}  frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
+            <Container>
+                <div className="padding">
+                    {tourist_spots[tourist_spot_id]['description']}
+                </div>
+            </Container>
         </div>
     );
 }

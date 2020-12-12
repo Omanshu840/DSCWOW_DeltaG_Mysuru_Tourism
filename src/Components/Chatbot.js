@@ -20,7 +20,7 @@ function Chatbot(props) {
     return (
         <div>
             <OverlayTrigger trigger="click" placement="left" overlay={popover}>
-                <Button className="btn-chatbot" variant="success">Click me to see</Button>
+                <Button className="btn-chatbot" variant="success">Chat with Us</Button>
             </OverlayTrigger>
         </div>
     );

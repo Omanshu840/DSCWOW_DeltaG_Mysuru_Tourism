@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { Container, Jumbotron } from 'react-bootstrap'
+import Fade from 'react-reveal/Fade';
 
 export default class Hero extends Component {
     render() {
         return (
             <div>
                 <Jumbotron className="text-center">
-                    <div className="jumbo-text">
-                        <h1 className="display-1">Mysuru</h1>
-                        <h2>Cultural capital of Karnataka</h2>
-                    </div>
+                    <Fade top>
+                        <div className="jumbo-text">
+                            <h1 className="display-1">Mysuru</h1>
+                            <h2>Cultural capital of Karnataka</h2>
+                        </div>
+                    </Fade>
                 </Jumbotron>
                 <div className="odd-section padding">
                     <Container>

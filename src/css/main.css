@@ -284,6 +284,7 @@ body {
 
 
 .btn-chatbot {
+    border-radius: 50%;
     position: fixed;
     right: 0;
     bottom: 0;
@@ -336,6 +337,39 @@ body {
     background-color: var(--pricolor-1);
 }
 
+.blog-jumbotronpage {
+    height: 35vw;
+    width: 100%;
+    background-image: url("../img/blogjumbo2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.blog-jumbotronpage .jumbo-text h1 {
+    color: #FEFFFF;
+    font-size: 8vw;
+    font-weight: 600;
+}
+
+.section-3 {
+    text-align: justify;
+}
+
+.Subheading {
+    background-color: #3aafa9;
+    padding: 130px;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #171717;
+    transform: translate(-50%, -50%);
+}
+
+.
 /*---------------------------------------------------------------------- /
 CARDS
 ----------------------------------------------------------------------- */

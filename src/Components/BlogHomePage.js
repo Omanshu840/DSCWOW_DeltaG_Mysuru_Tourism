@@ -33,10 +33,11 @@ class BlogHomePage extends Component {
                 </Jumbotron>
                 <Container>
                         {this.state.blogs.map((item, index) => {
+                            const blogLink = "/blog/" + index;
                             return (
                                 <div className="padding">
                                     <Card>
-                                        <Card.Header><h1>{item.author_name}</h1></Card.Header>
+                                        <Card.Header><h1>{item.blog_name}</h1></Card.Header>
                                         <Card.Body>
                                             <blockquote className="blockquote mb-0">
                                             <p>
@@ -48,7 +49,7 @@ class BlogHomePage extends Component {
                                                 <cite title="Source Title">{item.author_name}, {item.email}</cite>
                                             </footer>
                                             </blockquote>
-                                            <Button href="/blog" variant="primary">Check Full Article</Button>
+                                            <Button href={blogLink} variant="primary">Check Full Article</Button>
                                         </Card.Body>
                                     </Card>
                                 </div>

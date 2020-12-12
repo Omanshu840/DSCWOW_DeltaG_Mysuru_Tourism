@@ -9,6 +9,7 @@ import CustomNavbar from './Components/Navbar';
 import ThingsToDo from './Components/ThingsToDo';
 import TouristSpot from './Components/TouristSpot';
 import TouristSpots from './Components/TouristSpots';
+import Weather from './Components/Weather';
 
 export default class App extends Component {
   render() {
@@ -23,7 +24,8 @@ export default class App extends Component {
             <Route exact path="/festivals" component={Festivals}/>
             <Route path="/tourist-spot/:tourist_spot_id" component={TouristSpot}/>
             <Route exact path="/blog" component={BlogHomePage} />
-            <Route exact path="/blog/:blog_id" component={BlogPage} />
+            <Route path="/blog/:blog_id" component={BlogPage} />
+            <Route exact path="/weather" component={Weather} />
           </Switch>
         </BrowserRouter>
         <Chatbot/>

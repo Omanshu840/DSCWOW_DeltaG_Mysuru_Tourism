@@ -4,6 +4,7 @@ import festivals from '../Constants/festivals';
 import thingstodo from '../Constants/thingstodo';
 import CustomCorousel from './CustomCarousel';
 import Hero from './Hero';
+import Fade from 'react-reveal/Fade';
 
 class Homepage extends React.Component {
     render() {
@@ -13,50 +14,59 @@ class Homepage extends React.Component {
                 <CustomCorousel/>
 
                 <div className="odd-section padding">
-                    <div className="section-title">
-                        <h1>Things to Do</h1>
-                        <div className="underline"></div>
-                    </div>
-                    <div className="container">
-                        <div className="row">
-                            {thingstodo.map((item, index) => {
-                                return (
-                                    <div className="col-md-4">
-                                        <div className="card card-blog">
-                                            <div className="card-image">
-                                                <a href="/"> <img className="img img-raised" src={item.imgLink}  alt="..." /> </a>
-                                                <div className="ripple-cont"></div>
-                                            </div>
-                                            <h3 className="pt-5 pb-2">{item.name}</h3>
-                                        </div>
-                                    </div>
-                                )
-                            })}
+                    <Fade top>
+                        <div className="section-title">
+                            <h1>Things to Do</h1>
+                            <div className="underline"></div>
                         </div>
-                    </div>
+                    </Fade>
+                        <div className="container">
+                            <div className="row">
+                                {thingstodo.map((item, index) => {
+                                    return (
+                                        <Fade top>
+                                        <div className="col-md-4">
+                                            <div className="card card-blog">
+                                                <div className="card-image">
+                                                    <a href="/"> <img className="img img-raised" src={item.imgLink}  alt="..." /> </a>
+                                                    <div className="ripple-cont"></div>
+                                                </div>
+                                                <h3 className="pt-5 pb-2">{item.name}</h3>
+                                            </div>
+                                        </div>
+                                        </Fade>
+                                    )
+                                })}
+                            </div>
+                        </div>
+                    
                     <a href="/tourist-spots"><p>More</p></a>
                 </div>
 
 
                 <div className="even-section padding">
-                    <div className="section-title">
-                        <h1>Festivals</h1>
-                    </div>
+                    <Fade top>
+                        <div className="section-title">
+                            <h1>Festivals</h1>
+                        </div>
+                    </Fade>
                     <div className="Timeline">
                         <Container>
                             {festivals.map((item, index) => {
                                 const dir = index % 2 === 0 ? "timeline-item-left" : "timeline-item-right";
                                 return(
-                                    <div className={dir}>
-                                        <div className="timeline-img">
-                                            
+                                    <Fade top>
+                                        <div className={dir}>
+                                            <div className="timeline-img">
+                                                
+                                            </div>
+                                            <div className="timeline-content">
+                                            <div className="date">{item.month}</div>
+                                                {/* <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/> */}
+                                                <h3>{item.name}</h3>
+                                            </div>
                                         </div>
-                                        <div className="timeline-content">
-                                        <div className="date">{item.month}</div>
-                                            {/* <img src={require('../img/jumboImg.jpg')} className="act-img" alt="..."/> */}
-                                            <h3>{item.name}</h3>
-                                        </div>
-                                    </div>
+                                    </Fade>
                                 )
                             })}
                         </Container>
