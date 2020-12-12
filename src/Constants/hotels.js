@@ -2,6 +2,7 @@ const hotels = [
     {
         id: 0,
         name: "Fortune Jp Palace",
+        imgLink: require('../img/hotels/fjp.jpeg'),
         rating: 5,
         distance_from_City_centre: "3.6 km" ,
         Tariff: "Rs 2,472",
@@ -11,6 +12,7 @@ const hotels = [
     {
         id: 1,
         name: "The Windflower Resorts & Spa Mysore",
+        imgLink: require('../img/hotels/wfr.jpeg'),
         rating: 4,
         distance_from_City_centre:"3.4 km" ,
         Tariff: "Rs 5,315",
@@ -20,6 +22,7 @@ const hotels = [
     {
         id: 2,
         name: "Grand Mercure Mysuru",
+        imgLink: require('../img/hotels/gm.jpeg'),
         rating: 5,
         distance_from_City_centre:"3.9 km" ,
         Tariff: "Rs 2,895",
@@ -29,6 +32,7 @@ const hotels = [
     {
         id: 3,
         name: "Treebo Trend Akshaya Mahal Inn",
+        imgLink: require('../img/hotels/tta.jpeg'),
         rating: 3,
         distance_from_City_centre: "3.6 km",
         Tariff: "Rs 1,535",
@@ -38,6 +42,7 @@ const hotels = [
     {
         id: 4,
         name: "Mannars Residency",
+        imgLink: require('../img/hotels/mannars.jpeg'),
         rating: 1,
         distance_from_City_centre: "2.0 km",
         Tariff: "Rs 1,236",
@@ -47,6 +52,7 @@ const hotels = [
     {
         id: 5,
         name: "Hotel Sunflower",
+        imgLink: require('../img/hotels/sf.jpeg'),
         rating: 2,
         distance_from_City_centre: "4.9 km",
         Tariff: "Rs 1,438",
