@@ -56,9 +56,9 @@ export default class CustomNavbar extends Component {
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link href="/tourist-spots">Places</Nav.Link>
-                                <Nav.Link href="/tourist-spots">Festivals</Nav.Link>
+                                <Nav.Link href="/tourist-spots">Tourist Spots</Nav.Link>
                                 <Nav.Link href="/things-to-do">Things to Do</Nav.Link>
+                                <Nav.Link href="/hotels">Hotels</Nav.Link>
                                 <Nav.Link href="/blog">Blog</Nav.Link>
                                 {/* <NavDropdown title="Travel" id="collasible-nav-dropdown">
                                     <NavDropdown.Item href="#action/3.1">Air</NavDropdown.Item>

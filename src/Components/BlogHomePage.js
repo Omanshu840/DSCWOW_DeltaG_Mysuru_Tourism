@@ -3,6 +3,7 @@ import { Container, Jumbotron} from 'react-bootstrap'
 import tourist_spots from '../Constants/tourist_spots';
 import { db } from '../firebase'
 import BlogForm from './BlogForm'
+import Fade from 'react-reveal/Fade';
 
 class BlogHomePage extends Component {
 
@@ -40,17 +41,19 @@ class BlogHomePage extends Component {
                             const link = "place-blog/" + index;
 
                             return (
-                                <div className="col-md-4">
-                                    <a href={link}>
-                                    <div className="card card-blog">
-                                        <div className="card-image">
-                                            <a href="/"> <img className="img img-raised" src={item.img_Link}  alt="..." /> </a>
-                                            <div className="ripple-cont"></div>
+                                <Fade top>
+                                    <div className="col-md-4">
+                                        <a href={link}>
+                                        <div className="card card-blog">
+                                            <div className="card-image">
+                                                <a href="/"> <img className="img img-raised" src={item.img_Link}  alt="..." /> </a>
+                                                <div className="ripple-cont"></div>
+                                            </div>
+                                            <h5 className="pt-5 pb-2">{item.name} Blogs</h5>
                                         </div>
-                                        <h5 className="pt-5 pb-2">{item.name} Blogs</h5>
+                                        </a>
                                     </div>
-                                    </a>
-                                </div>
+                                </Fade>
                             )
                         })}
                     </div>

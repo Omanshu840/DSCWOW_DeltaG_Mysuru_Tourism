@@ -3,6 +3,7 @@ import { Container, Jumbotron, Card, Button} from 'react-bootstrap'
 import tourist_spots from '../Constants/tourist_spots';
 import { db } from '../firebase'
 import BlogForm from './BlogForm'
+import Fade from 'react-reveal/Fade';
 
 class PlaceBlogPage extends Component {
 
@@ -39,22 +40,24 @@ class PlaceBlogPage extends Component {
                             if(item.place === tourist_spots[this.props.match.params.place_id]['name']) {
                                 return (
                                     <div className="padding">
-                                        <Card>
-                                            <Card.Header><h1>{item.blog_name}</h1></Card.Header>
-                                            <Card.Body>
-                                                <blockquote className="blockquote mb-0">
-                                                <p>
+                                        <Fade top>
+                                            <Card>
+                                                <Card.Header><h1>{item.blog_name}</h1></Card.Header>
+                                                <Card.Body>
+                                                    <blockquote className="blockquote mb-0">
+                                                    <p>
+                                                        {' '}
+                                                        {item.content}
                                                     {' '}
-                                                    {item.content}
-                                                {' '}
-                                                </p>
-                                                <footer className="blockquote-footer">
-                                                    <cite title="Source Title">{item.author_name}, {item.email}</cite>
-                                                </footer>
-                                                </blockquote>
-                                                <Button href={blogLink} variant="primary">Check Full Article</Button>
-                                            </Card.Body>
-                                        </Card>
+                                                    </p>
+                                                    <footer className="blockquote-footer">
+                                                        <cite title="Source Title">{item.author_name}, {item.email}</cite>
+                                                    </footer>
+                                                    </blockquote>
+                                                    <Button href={blogLink} variant="primary">Check Full Article</Button>
+                                                </Card.Body>
+                                            </Card>
+                                        </Fade>
                                     </div>
                                 )
                             }

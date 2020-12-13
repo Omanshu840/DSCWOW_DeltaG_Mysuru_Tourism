@@ -7,6 +7,7 @@ import CovidAlert from './Components/CovidAlert';
 import Festivals from './Components/Festivals';
 import Footer from './Components/Footer';
 import Homepage from './Components/Homepage';
+import Hotels from './Components/Hotels';
 import CustomNavbar from './Components/Navbar';
 import PlaceBlogPage from './Components/PlaceBlogPage';
 import ThingsToDo from './Components/ThingsToDo';
@@ -28,13 +29,13 @@ const App = () => {
     return (
       <div className="light-mode">
         <CustomNavbar isLoggedIn={isLoggedIn} SignIn={SignIn}/>
-        <CovidAlert/>
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/tourist-spots" component={TouristSpots}/>
             <Route exact path="/things-to-do" component={ThingsToDo}/>
             <Route exact path="/festivals" component={Festivals}/>
+            <Route exact path="/hotels" component={Hotels}/>
             <Route path="/tourist-spot/:tourist_spot_id" component={TouristSpot}/>
             <Route exact path="/blog" component={BlogHomePage} />
             <Route path="/place-blog/:place_id" component={PlaceBlogPage} />

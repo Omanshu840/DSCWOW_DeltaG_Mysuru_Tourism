@@ -6,11 +6,13 @@ import CustomCorousel from './CustomCarousel';
 import Hero from './Hero';
 import Fade from 'react-reveal/Fade';
 import hotels from '../Constants/hotels';
+import CovidAlert from './CovidAlert';
 
 class Homepage extends React.Component {
     render() {
         return (
             <div>
+                <CovidAlert/>
                 <Hero/>
                 <CustomCorousel/>
 
@@ -45,7 +47,7 @@ class Homepage extends React.Component {
                 </div>
 
 
-                <div className="even-section padding">
+                <div className="even-section padding festivals">
                     <Fade top>
                         <div className="section-title">
                             <h1>Festivals</h1>
@@ -110,7 +112,7 @@ class Homepage extends React.Component {
                             </div>
                         </div>
                     
-                    <Button href="/things_to_do">Explore More</Button>
+                    <Button href="/hotels">Explore More</Button>
                 </div>
 
                 <div className="even-section padding">
