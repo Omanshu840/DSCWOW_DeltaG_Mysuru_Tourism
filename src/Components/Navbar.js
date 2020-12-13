@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {Navbar, Nav, NavDropdown, Container, Button} from 'react-bootstrap';
+import {Navbar, Nav, Container, Button} from 'react-bootstrap';
 import firebase from 'firebase';
 
 const API_Key = '69686c974eab1d57671477cd89aef9b2';

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Button, Alert} from 'react-bootstrap'
+import {Alert} from 'react-bootstrap'
 
 function CovidAlert() {
     const [show, setShow] = useState(true);

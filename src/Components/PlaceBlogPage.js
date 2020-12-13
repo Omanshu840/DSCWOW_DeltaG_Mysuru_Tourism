@@ -1,5 +1,5 @@
-import React, { Component, useState } from 'react'
-import { Container, Jumbotron, Card, Button, Form} from 'react-bootstrap'
+import React, { Component} from 'react'
+import { Container, Jumbotron, Card, Button} from 'react-bootstrap'
 import tourist_spots from '../Constants/tourist_spots';
 import { db } from '../firebase'
 import BlogForm from './BlogForm'

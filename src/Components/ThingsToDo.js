@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Card, Container, Row } from 'react-bootstrap'
+import {Container, Row } from 'react-bootstrap'
 import thingstodo from '../Constants/thingstodo'
 import Fade from 'react-reveal/Fade';
 
