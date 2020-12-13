@@ -18,7 +18,7 @@ export default class Weather extends Component {
     }
 
     getWeather = async() => {
-        const api_call = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=Mysuru&units=metric&appid=${API_Key}`);
+        const api_call = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=Mysuru&units=metric&appid=${API_Key}`);
         const response = await api_call.json();
         this.setState({
             weather: response['weather'][0]['description'],
