@@ -130,6 +130,10 @@ body {
    background-color: rgba(17, 7, 7, 0.5);
 }
 
+.carousel-caption h1 {
+    font-size: 4vw;
+}
+
 .tourist-spots .card {
     padding: 0px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -305,7 +309,16 @@ body {
 .chatbot {
     height: 80vh;
     width: 25vw;
+    position: fixed;
+    bottom: 10vh;
+    right: 0px;
 }
+
+@media only screen and (max-width: 768px) {
+    .chatbot {
+        width: 80vw;
+    }
+  }
 
 .section-cards {
     z-index: 3;

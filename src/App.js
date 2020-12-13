@@ -20,6 +20,11 @@ const App = () => {
       setLoggedIn(!isLoggedIn)
     }
 
+    const [isChatbotOpen, setIsChatbotOpen] = React.useState(false)
+    const toggleChatbot= () => {
+      setIsChatbotOpen(!isChatbotOpen)
+    }
+
     return (
       <div className="light-mode">
         <CustomNavbar isLoggedIn={isLoggedIn} SignIn={SignIn}/>
@@ -37,7 +42,7 @@ const App = () => {
             <Route exact path="/weather" component={Weather} />
           </Switch>
         </BrowserRouter>
-        <Chatbot/>
+        <Chatbot isChatbotOpen={isChatbotOpen} toggleChatbot={toggleChatbot}/>
         <Footer/>
       </div>
     )
