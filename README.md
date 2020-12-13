@@ -12,6 +12,14 @@ Team Name: DeltaG
 | Omansh Mahawar (Team Lead)    | omanshumahawar1234@gmail.com |
 | Shreeya Sand|shreeyajain12@gmail.com|    
 | Shrvan Warke | shrvanwarke0912@gmail.com       |  
+
+
+
+# Major Functionalities
+- Interactive ChatBot 	
+- Google Street View
+- Blogging Platform 
+- Weather Based Suggestions 
  
 
 
