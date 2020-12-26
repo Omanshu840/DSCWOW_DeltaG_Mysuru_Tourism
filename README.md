@@ -1,6 +1,6 @@
 # DSCWOW_DeltaG_Mysuru_Tourism
 
-This Repository is for Mysuru Tourism Web App by DSCWOW
+This Repository is for Mysuru Tourism Web App build for the DSCWOW Hackathon organized by the Developer Students Club.
 
 
 Team Name: DeltaG
@@ -9,7 +9,7 @@ Team Name: DeltaG
 
 | Member name|Email Id| 
 | :------------: |:---------------:| 
-| Omansh Mahawar (Team Lead)    | omanshumahawar1234@gmail.com |
+| Omanshu Mahawar (Team Lead)    | omanshumahawar1234@gmail.com |
 | Shreeya Sand|shreeyajain12@gmail.com|    
 | Shrvan Warke | shrvanwarke0912@gmail.com       |  
 
