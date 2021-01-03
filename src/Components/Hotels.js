@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Button} from 'react-bootstrap'
-import tourist_spots from '../Constants/tourist_spots'
 import Fade from 'react-reveal/Fade';
 import hotels from '../Constants/hotels';
 

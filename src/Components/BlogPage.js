@@ -1,4 +1,3 @@
-import { useParams } from 'react-router-dom';
 import React, { Component } from 'react'
 import { db } from '../firebase';
 import { Jumbotron } from 'react-bootstrap';

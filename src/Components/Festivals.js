@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import Fade from 'react-reveal/Fade';
-import festivals from '../Constants/festivals';
 
 export default class Festivals extends Component {
     render() {

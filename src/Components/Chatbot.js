@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, OverlayTrigger, Popover } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 
 // const popover = (

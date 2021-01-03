@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import BlogHomePage from './Components/BlogHomePage';
 import BlogPage from './Components/BlogPage';
 import Chatbot from './Components/Chatbot';
-import CovidAlert from './Components/CovidAlert';
 import Festivals from './Components/Festivals';
 import Footer from './Components/Footer';
 import Homepage from './Components/Homepage';
