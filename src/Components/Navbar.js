@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Navbar, Nav, Container, Button} from 'react-bootstrap';
 import firebase from 'firebase';
+import { Link } from 'react-router-dom';
 
 const API_Key = '69686c974eab1d57671477cd89aef9b2';
 
@@ -46,30 +47,27 @@ export default class CustomNavbar extends Component {
             <div>
                 <Navbar className="main-navbar" collapseOnSelect expand="lg" variant="dark">
                     <Container>
-                        <Navbar.Brand href="/"><img
-                            src={require('../img/logo.png')}
-                            width="80"
-                            height="60"
-                            className="d-inline-block align-top"
-                            alt="React Bootstrap logo"
-                        /></Navbar.Brand>
+                        <Link to="/" className="navbar-brand">
+                            <img
+                                src={require('../img/logo.png')}
+                                width="80"
+                                height="60"
+                                className="d-inline-block align-top"
+                                alt="React Bootstrap logo"
+                            />
+                        </Link>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="mr-auto">
-                                <Nav.Link href="/tourist-spots">Tourist Spots</Nav.Link>
-                                <Nav.Link href="/things-to-do">Things to Do</Nav.Link>
-                                <Nav.Link href="/hotels">Hotels</Nav.Link>
-                                <Nav.Link href="/blog">Blog</Nav.Link>
-                                {/* <NavDropdown title="Travel" id="collasible-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1">Air</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.2">Train</NavDropdown.Item>
-                                    <NavDropdown.Item href="#action/3.3">Road</NavDropdown.Item>
-                                </NavDropdown> */}
-                                </Nav>
+                                <Link to="/tourist-spots" className="nav-link">Tourist Spots</Link>
+                                <Link to="/things-to-do" className="nav-link">Things to Do</Link>
+                                <Link to="/hotels" className="nav-link">Hotels</Link>
+                                <Link to="/blog" className="nav-link">Blog</Link>
+                            </Nav>
                             <Nav>
-                                <Nav.Link href="/weather">
+                                <Link to="/weather" className="nav-link">
                                     {this.state.temp}&deg; C
-                                </Nav.Link>
+                                </Link>
                             </Nav>
                             {(this.props.isLoggedIn) ?  "user" : <Button className="btn-signIn" onClick={SignInUser}>Sign In</Button>}
                         </Navbar.Collapse>

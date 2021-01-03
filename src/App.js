@@ -28,8 +28,8 @@ const App = () => {
 
     return (
       <div className="light-mode">
-        <CustomNavbar isLoggedIn={isLoggedIn} SignIn={SignIn}/>
         <BrowserRouter>
+          <CustomNavbar isLoggedIn={isLoggedIn} SignIn={SignIn}/>
           <Switch>
             <Route exact path="/" component={Homepage} />
             <Route exact path="/tourist-spots" component={TouristSpots}/>
@@ -42,9 +42,9 @@ const App = () => {
             <Route path="/blog/:blog_id" component={BlogPage} />
             <Route exact path="/weather" component={Weather} />
           </Switch>
+          <Chatbot isChatbotOpen={isChatbotOpen} toggleChatbot={toggleChatbot}/>
+          <Footer/>
         </BrowserRouter>
-        <Chatbot isChatbotOpen={isChatbotOpen} toggleChatbot={toggleChatbot}/>
-        <Footer/>
       </div>
     )
 }
